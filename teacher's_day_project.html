@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher's Day Wish</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color:  #fff;
+    border: none;
+    color:black;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f7eceb;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    width: 350px;
+    margin-top: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hidden {
+    display: none;
+}
+
+.animated-img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+.card h1 {
+    font-size: 28px;
+    color: #ff6f61;
+}
+
+.card p {
+    font-size: 18px;
+    color: #555;
+    margin-top: 10px;
+}
+
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+</style>
+<body>
+    <div class="container">
+        <button id="showWishButton"> Wish Happy Teacher's Day! <img src="tea1-removebg-preview.png" alt="" width="100px" height="auto"></button>
+
+        <div id="wishCard" class="card hidden">
+            <img src="tea.png" alt="Teacher's Day" class="animated-img">
+            <h1 class="content">Happy Teacher's Day!</h1>
+            <p>You are an inspiration and a true role model!</p>
+        </div>
+    </div>
+    <script>
+document.getElementById("showWishButton").addEventListener("click", function() {
+    const card = document.getElementById("wishCard");
+    card.classList.toggle("hidden");
+});
+
+    </script>
+</body>
+</html>
